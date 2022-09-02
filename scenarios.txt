@@ -1,0 +1,31 @@
+Scenarios are storylines that makes events and pops focus on certain topics more.
+
+Scenario 1: Default.
+Economy -- NONE
+Social -- NONE
+Foreign Threats -- NONE
+Active Crisis -- NONE
+
+Scenario 2: Economic Crisis (Pops).
+Economy -- YES
+Social -- YES
+Foreign Threats -- NONE
+Active Crisis -- YES
+
+Scenario 3: Immigrant Crisis.
+Economy -- NONE
+Social -- YES
+Foreign Threats -- NONE
+Active Crisis -- YES
+
+Scenario 4: War Imminent.
+Economy -- NONE
+Social -- NONE
+Foreign Threats -- YES
+Active Crisis -- YES
+
+Scenario 5: Economic Crisis (Corp.)
+Economy -- YES
+Social -- NONE
+Foreign Threats -- NONE
+Active Crisis -- YES

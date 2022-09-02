@@ -1,0 +1,20 @@
+Populists
+Black
+
+Communists
+Dark Red
+
+Liberals
+Dark Blue
+
+Social Democrats
+Red
+
+Nationalists
+Maroon
+
+Religious
+Yellow
+
+Minority Rights
+Purple

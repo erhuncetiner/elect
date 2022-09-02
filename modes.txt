@@ -1,0 +1,29 @@
+Mode 1: Natural.
+Real bases.
+Real events.
+Real difficulty.
+MAP REAL.
+
+Mode 2: Historical.
+Historical bases.
+Historical events.
+Historical difficulty.
+MAP REAL.
+
+Mode 3: Creative.
+Set bases.
+Random events.
+Set difficulty.
+MAP SET.
+
+Mode 4: Fantasy.
+Real bases.
+Random events.
+Set difficulty.
+MAP FICTION.
+
+Mode 5: Flexible.
+Real bases.
+Random events.
+Real difficulty.
+MAP REAL.

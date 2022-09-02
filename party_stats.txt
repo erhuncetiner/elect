@@ -1,0 +1,71 @@
+[Ideology]
+Base [spectrum]
+Leader Character [unfixed / strongman]
+Policycreating -- When does it start a policy? [aggresive -> creates issues / passive -> dismisses issues / responsive -> solves issues]
+Social Stand [status-quo -> dont change it / agitator -> try to change / responsive -> try to answer changes]
+Economical Stand [spectrum]
+Rationality [logic / feelings]
+
+[Populists]
+No fixed base.
+Strongman leader.
+Aggresive.
+Responsive.
+Changes acc. to the pops.
+Irrational.
+
+[Communists]
+Far-left.
+Strongman leader.
+Aggresive.
+Agitating.
+State.
+Rational.
+
+[Liberals]
+Centre, centre-left, centre-right, apoliticals.
+No fixed leader.
+Passive.
+Status-quo.
+Private.
+Rational.
+
+[Social Democrats]
+Centre, centre-left, left, apoliticals.
+No fixed leader.
+Responsive.
+Agitating.
+Mixed.
+Irrational.
+
+[Nationalists]
+Centre-right, right, far-right.
+Strongman leader.
+Aggresive.
+Agitating.
+Changes according to the pops.
+Rational.
+
+[Religious]
+Centre-right, right, far-right.
+Strongman leader.
+Aggresive.
+Status-quo.
+Changes according to the pops.
+Irrational.
+
+[Minority Rights]
+Centre-left, left, far-left, apolitical.
+No fixed leader.
+Aggresive.
+Responsive.
+Mixed.
+Rational.
+
+[Custom]
+No fixed base.
+No fixed leader.
+No fixed strategy.
+No fixed social view.
+No fixed economical view.
+No fixed mentality.

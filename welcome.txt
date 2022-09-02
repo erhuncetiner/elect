@@ -1,0 +1,7 @@
+Welcome President!
+
+Elected is a decision based game where you start off as a party's leader and try to climb up the political ladder and 
+get elected. Throughout this quest, you will have to make decisions. Events will pop up on your screen and your decisions
+ will impact the way your election goes.
+
+In order to get elected, you need votes.

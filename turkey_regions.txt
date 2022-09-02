@@ -1,0 +1,113 @@
+Istanbul
+Level = 50
+Economic = Urban
+Social = Mixed
+Ethnic = Majority
+
+Ankara
+Level = 20
+Economic = Urban
+Social = Mixed
+Ethnic = Majority
+
+Izmir
+Level = 15
+Economic = Urban
+Social = Urban
+Ethnic = Majority
+
+Thrace
+Level = 8
+Economic = Regional
+Social = Urban
+Ethnic = Majority
+
+South Marmara
+Level = 10
+Economic = Urban
+Social = Regional
+Ethnic = Majority
+
+Inner Aegean
+Level = 7
+Economic = Regional
+Social = Regional
+Ethnic = Majority
+
+Southern Aegean
+Level = 6
+Economic = Regional
+Social = Urban
+Ethnic = Majority
+
+Western Mediterrean
+Level = 7
+Economic = Urban
+Social = Mixed
+Ethnic = Majority
+
+Eastern Mediterrean
+Level = 10
+Economic = Urban
+Social = Mixed
+Ethnic = Majority
+
+Central Anatolia
+Level = 8
+Economic = Urban
+Social = Regional
+Ethnic = Majority
+
+Eastern Central Anatolia
+Level = 5
+Economic = Regional
+Social = Regional
+Ethnic = Majority
+
+Western Black Sea
+Level = 3
+Economic = Regional
+Social = Regional
+Ethnic = Majority
+
+Eastern Black Sea
+Level = 6
+Economic = Regional
+Social = Regional
+Ethnic = Majority
+
+North East
+Level = 3
+Economic = Regional
+Social = Regional
+Ethnic = Majority
+
+East Proper
+Level = 4
+Economic = Regional
+Social = Regional
+Ethnic = Majority
+
+East Borders
+Level = 2
+Economic = Regional
+Social = Regional
+Ethnic = Minority
+
+Southeastern Borders
+Level = 4
+Economic = Regional
+Social = Regional
+Ethnic = Minority
+
+Western Southeast
+Level = 4
+Economic = Regional
+Social = Regional
+Ethnic = Majority
+
+Tunceli
+Level = 1
+Economic = Regional
+Social = Urban
+Ethnic = Minority
