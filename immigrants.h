@@ -8,7 +8,7 @@ class immigrants : public ruralPops
 	public:
 		immigrants();
 		
-		void cult();
+		void cultism();
 		
 	protected:
 };

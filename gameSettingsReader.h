@@ -3,18 +3,16 @@
 
 using namespace std;
 
-#ifndef GAMEOBJECT_H
-#define GAMEOBJECT_H
+#pragma once
 
-class GameObject
+class gameSettingsReader
 {
 	public:
-		GameObject();
+		gameSettingsReader();
 //		virtual void Update() = 0;
 //		virtual void Render() = 0;
 //		~GameObject(void);
-//	void gameSettingsReader();
+		void gameSettingsReaderF();
 	
 };
 
-#endif

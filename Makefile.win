@@ -4,9 +4,10 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o GameObject.o Party.o Region.o pops.o urbanPops.o ruralPops.o currentEvent.o player.o corporations.o service.o educated.o admin.o artists.o
-LINKOBJ  = main.o GameObject.o Party.o Region.o pops.o urbanPops.o ruralPops.o currentEvent.o player.o corporations.o service.o educated.o admin.o artists.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+RES      = elect_private.res
+OBJ      = admin.o artists.o corporations.o currentEvent.o educated.o farmers.o GameObject.o immigrants.o main.o Party.o player.o pops.o Region.o ruralPops.o service.o soldiers.o urbanPops.o workers.o gameSettingsReader.o $(RES)
+LINKOBJ  = admin.o artists.o corporations.o currentEvent.o educated.o farmers.o GameObject.o immigrants.o main.o Party.o player.o pops.o Region.o ruralPops.o service.o soldiers.o urbanPops.o workers.o gameSettingsReader.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = elect.exe
@@ -24,44 +25,63 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main.o: main.cpp
-	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
-
-GameObject.o: GameObject.cpp
-	$(CPP) -c GameObject.cpp -o GameObject.o $(CXXFLAGS)
-
-Party.o: Party.cpp
-	$(CPP) -c Party.cpp -o Party.o $(CXXFLAGS)
-
-Region.o: Region.cpp
-	$(CPP) -c Region.cpp -o Region.o $(CXXFLAGS)
-
-pops.o: pops.cpp
-	$(CPP) -c pops.cpp -o pops.o $(CXXFLAGS)
-
-urbanPops.o: urbanPops.cpp
-	$(CPP) -c urbanPops.cpp -o urbanPops.o $(CXXFLAGS)
-
-ruralPops.o: ruralPops.cpp
-	$(CPP) -c ruralPops.cpp -o ruralPops.o $(CXXFLAGS)
-
-currentEvent.o: currentEvent.cpp
-	$(CPP) -c currentEvent.cpp -o currentEvent.o $(CXXFLAGS)
-
-player.o: player.cpp
-	$(CPP) -c player.cpp -o player.o $(CXXFLAGS)
-
-corporations.o: corporations.cpp
-	$(CPP) -c corporations.cpp -o corporations.o $(CXXFLAGS)
-
-service.o: service.cpp
-	$(CPP) -c service.cpp -o service.o $(CXXFLAGS)
-
-educated.o: educated.cpp
-	$(CPP) -c educated.cpp -o educated.o $(CXXFLAGS)
-
 admin.o: admin.cpp
 	$(CPP) -c admin.cpp -o admin.o $(CXXFLAGS)
 
 artists.o: artists.cpp
 	$(CPP) -c artists.cpp -o artists.o $(CXXFLAGS)
+
+corporations.o: corporations.cpp
+	$(CPP) -c corporations.cpp -o corporations.o $(CXXFLAGS)
+
+currentEvent.o: currentEvent.cpp
+	$(CPP) -c currentEvent.cpp -o currentEvent.o $(CXXFLAGS)
+
+educated.o: educated.cpp
+	$(CPP) -c educated.cpp -o educated.o $(CXXFLAGS)
+
+farmers.o: farmers.cpp
+	$(CPP) -c farmers.cpp -o farmers.o $(CXXFLAGS)
+
+GameObject.o: GameObject.cpp
+	$(CPP) -c GameObject.cpp -o GameObject.o $(CXXFLAGS)
+
+immigrants.o: immigrants.cpp
+	$(CPP) -c immigrants.cpp -o immigrants.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Party.o: Party.cpp
+	$(CPP) -c Party.cpp -o Party.o $(CXXFLAGS)
+
+player.o: player.cpp
+	$(CPP) -c player.cpp -o player.o $(CXXFLAGS)
+
+pops.o: pops.cpp
+	$(CPP) -c pops.cpp -o pops.o $(CXXFLAGS)
+
+Region.o: Region.cpp
+	$(CPP) -c Region.cpp -o Region.o $(CXXFLAGS)
+
+ruralPops.o: ruralPops.cpp
+	$(CPP) -c ruralPops.cpp -o ruralPops.o $(CXXFLAGS)
+
+service.o: service.cpp
+	$(CPP) -c service.cpp -o service.o $(CXXFLAGS)
+
+soldiers.o: soldiers.cpp
+	$(CPP) -c soldiers.cpp -o soldiers.o $(CXXFLAGS)
+
+urbanPops.o: urbanPops.cpp
+	$(CPP) -c urbanPops.cpp -o urbanPops.o $(CXXFLAGS)
+
+workers.o: workers.cpp
+	$(CPP) -c workers.cpp -o workers.o $(CXXFLAGS)
+
+gameSettingsReader.o: gameSettingsReader.cpp
+	$(CPP) -c gameSettingsReader.cpp -o gameSettingsReader.o $(CXXFLAGS)
+
+elect_private.res: elect_private.rc 
+	$(WINDRES) -i elect_private.rc --input-format=rc -o elect_private.res -O coff 
+

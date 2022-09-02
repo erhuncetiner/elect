@@ -6,6 +6,7 @@
 class currentEvent : public GameObject
 {
 	public:
+		bool beingDisplayed;
 	protected:
 };
 
