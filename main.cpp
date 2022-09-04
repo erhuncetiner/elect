@@ -83,8 +83,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	hwnd = CreateWindowEx(WS_EX_CLIENTEDGE,"WindowClass","ELECT",WS_VISIBLE|WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, /* x */
 		CW_USEDEFAULT, /* y */
-		640, /* width */
-		480, /* height */
+		1440, /* width */
+		840, /* height */
 		NULL,NULL,hInstance,NULL);
 
 	if(hwnd == NULL) {
@@ -107,6 +107,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	GameObject startGame;	
 	Region karadeniz;
 	gameSettingsReader settings;
+	
+	cout << "Hello" << endl;
 	
 	return msg.wParam;
 }

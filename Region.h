@@ -11,6 +11,7 @@
 #include "service.h"
 #include "soldiers.h"
 #include "workers.h"
+#include "Party.h"
 
 class Region : public GameObject
 {
@@ -18,6 +19,7 @@ class Region : public GameObject
 		int economic;
 		int social;
 		bool minority;
+		int totalDep;
 		corporations regionalCorps;
 		admin regionalAdmin;
 		artists regionalArtists;
@@ -27,6 +29,9 @@ class Region : public GameObject
 		service regionalService;
 		soldiers regionalSoldiers;
 		workers regionalWorkers;
+		
+		Party party_01;
+		
 		Region();
 	protected:
 };

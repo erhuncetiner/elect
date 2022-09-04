@@ -13,6 +13,7 @@ class Party : public GameObject
 		string ideologyNameAttributed;
 		
 		double currentTotalVote;
+		int currentDep;
 		bool isRuling;
 		int policyMakingStance;
 		int social;

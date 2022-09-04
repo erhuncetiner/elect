@@ -18,6 +18,8 @@ class pops : public GameObject
 		bool irrational;
 		bool minority;
 		
+		double percentageForParty_1; /// ALWAYS BETWEEN 0 AND 1
+		
 		
 		pops();
 	protected:
