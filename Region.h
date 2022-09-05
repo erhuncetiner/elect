@@ -31,6 +31,13 @@ class Region : public GameObject
 		workers regionalWorkers;
 		
 		Party party_01;
+		Party party_02;
+		Party party_03;
+		Party party_04;
+		Party party_05;
+		Party party_06;
+		Party party_07;
+		Party party_08;
 		
 		Region();
 	protected:

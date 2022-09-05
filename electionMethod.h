@@ -11,7 +11,7 @@ class electionMethod : public GameObject
 		
 		
 		
-		electionMethod(Region regionOfElection);
+		electionMethod(Region region_x);
 		void electionResults();
 	protected:
 };
