@@ -8,7 +8,10 @@ electionMethod::electionMethod(Region region_x)
 	int round = 1;
 	localTotalVotes = region_x.regionalFarmers.population + region_x.regionalAdmin.population + region_x.regionalArtists.population + region_x.regionalCorps.population
 	+ region_x.regionalEducated.population + region_x.regionalImmigrants.population + region_x.regionalService.population + region_x.regionalSoldiers.population + region_x.regionalWorkers.population;
-	int deputyWonByParty_1;
+//	int deputyWonByParty_1 = 0;
+//	int deputyWonByParty_2 = 0;
+//	int deputyWonByParty_3 = 0;
+//	int deputyWonByParty_4 = 0;
 //	int localFarmersVotingFor;
 //	localFarmersVotingFor = region_x.regionalFarmers.totLean;
 	Party party_01;
@@ -20,6 +23,14 @@ electionMethod::electionMethod(Region region_x)
 	Party party_07;
 	Party party_08;
 
+//	region_x.party_01.currentTotalVote = 0;
+//	region_x.party_02.currentTotalVote = 0;
+//	region_x.party_03.currentTotalVote = 0;
+//	region_x.party_04.currentTotalVote = 0;
+//	region_x.party_05.currentTotalVote = 0;
+//	region_x.party_06.currentTotalVote = 0;
+//	region_x.party_07.currentTotalVote = 0;
+//	region_x.party_08.currentTotalVote = 0;
 		
 	region_x.party_01.currentTotalVote =+ region_x.regionalFarmers.population*region_x.regionalFarmers.percentageForParty_1;
 	region_x.party_02.currentTotalVote =+ region_x.regionalFarmers.population*region_x.regionalFarmers.percentageForParty_2;
@@ -29,22 +40,94 @@ electionMethod::electionMethod(Region region_x)
 	region_x.party_06.currentTotalVote =+ region_x.regionalFarmers.population*region_x.regionalFarmers.percentageForParty_6;
 	region_x.party_07.currentTotalVote =+ region_x.regionalFarmers.population*region_x.regionalFarmers.percentageForParty_7;
 	region_x.party_08.currentTotalVote =+ region_x.regionalFarmers.population*region_x.regionalFarmers.percentageForParty_8;
-region_x.party_01.currentTotalVote = 5001;
-region_x.totalDep = 5;	
+	region_x.party_01.currentTotalVote = 30000;
+	region_x.party_02.currentTotalVote = 60000;
+	region_x.party_03.currentTotalVote = 120000;
+	region_x.party_04.currentTotalVote = 240000;
 
-	
+	region_x.totalDep = 5;	
+	double xMax;
 //while {
-
-	while ((round <= region_x.totalDep)&&(region_x.party_01.currentTotalVote > 5000)){ /// þimdilik sayý var normalde en çok olarak deðiþecek.
+	Party firstPlace;
+	while ((round <= region_x.totalDep)){ /// þimdilik sayý var normalde en çok olarak deðiþecek.
+		xMax = max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote)));
+		if (xMax == region_x.party_04.currentTotalVote){
+			firstPlace = region_x.party_04;
+		
 		cout << "ROUND: " << round << endl;
 		// First deputy
-		deputyWonByParty_1 = deputyWonByParty_1 + 1;
+//		region_x.party_01.currentDep = region_x.party_01.currentDep + 1;
+//		region_x.party_02.currentDep = region_x.party_02.currentDep + 1;
+//		region_x.party_03.currentDep = region_x.party_03.currentDep + 1;
+//		region_x.party_04.currentDep = region_x.party_04.currentDep + 1;
+		firstPlace.currentDep = firstPlace.currentDep + 1;
+//		region_x.party_01.currentTotalVote = region_x.party_01.currentTotalVote / (round + 1);
+		firstPlace.currentTotalVote = firstPlace.currentTotalVote / (round + 1);
+		cout << "Remaining vote: " << firstPlace.currentTotalVote << endl << endl; 
+			region_x.party_04 = firstPlace;
 		round++;
+//		xMax = max(xMax, max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote))));
+		firstPlace.currentTotalVote = max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote)));
+//		cout << round;
+	}	else	if (xMax == region_x.party_03.currentTotalVote){
+			firstPlace = region_x.party_03;
 		
+		cout << "ROUND: " << round << endl;
+		// First deputy
+//		region_x.party_01.currentDep = region_x.party_01.currentDep + 1;
+//		region_x.party_02.currentDep = region_x.party_02.currentDep + 1;
+//		region_x.party_03.currentDep = region_x.party_03.currentDep + 1;
+//		region_x.party_04.currentDep = region_x.party_04.currentDep + 1;
+		firstPlace.currentDep = firstPlace.currentDep + 1;
+//		region_x.party_01.currentTotalVote = region_x.party_01.currentTotalVote / (round + 1);
+		firstPlace.currentTotalVote = firstPlace.currentTotalVote / (round + 1);
+		cout << "Remaining vote: " << firstPlace.currentTotalVote << endl << endl; 
+			region_x.party_03 = firstPlace;
+		round++;
+//		xMax = max(xMax, max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote))));
+		firstPlace.currentTotalVote = max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote)));
+//		cout << round;
+	}	else	if (xMax == region_x.party_02.currentTotalVote){
+			firstPlace = region_x.party_02;
+		
+		cout << "ROUND: " << round << endl;
+		// First deputy
+//		region_x.party_01.currentDep = region_x.party_01.currentDep + 1;
+//		region_x.party_02.currentDep = region_x.party_02.currentDep + 1;
+//		region_x.party_03.currentDep = region_x.party_03.currentDep + 1;
+//		region_x.party_04.currentDep = region_x.party_04.currentDep + 1;
+		firstPlace.currentDep = firstPlace.currentDep + 1;
+//		region_x.party_01.currentTotalVote = region_x.party_01.currentTotalVote / (round + 1);
+		firstPlace.currentTotalVote = firstPlace.currentTotalVote / (round + 1);
+		cout << "Remaining vote: " << firstPlace.currentTotalVote << endl << endl; 
+			region_x.party_02 = firstPlace;
+		round++;
+//		xMax = max(xMax, max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote))));
+		firstPlace.currentTotalVote = max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote)));
+//		cout << round;
+	}	else	if (xMax == region_x.party_01.currentTotalVote){
+			firstPlace = region_x.party_01;
+		
+		cout << "ROUND: " << round << endl;
+		// First deputy
+//		region_x.party_01.currentDep = region_x.party_01.currentDep + 1;
+//		region_x.party_02.currentDep = region_x.party_02.currentDep + 1;
+//		region_x.party_03.currentDep = region_x.party_03.currentDep + 1;
+//		region_x.party_04.currentDep = region_x.party_04.currentDep + 1;
+		firstPlace.currentDep = firstPlace.currentDep + 1;
+//		region_x.party_01.currentTotalVote = region_x.party_01.currentTotalVote / (round + 1);
+		firstPlace.currentTotalVote = firstPlace.currentTotalVote / (round + 1);
+		cout << "Remaining vote: " << firstPlace.currentTotalVote << endl << endl; 
+			region_x.party_01 = firstPlace;
+		round++;
+//		xMax = max(xMax, max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote))));
+		firstPlace.currentTotalVote = max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote)));
+//		cout << round;
+	}
 		
 //		region_x.party_01.currentTotalVote = region_x.party_01.currentTotalVote / round;	
 	}
-	
+	cout << region_x.party_01.currentDep << " deputies were won by Party 1 at the end of " << round - 1 << " rounds." << endl;
 //	cout << "ROUND: " << round << endl;
 //}
 	
