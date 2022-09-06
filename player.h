@@ -7,9 +7,12 @@
 class player : public GameObject
 {
 	public:
-		string name;
-		Party chosenParty;
+		string name; // This should replace the leader name of the chosen party.
+		Party chosenParty; // This should replace the name of the chosen party.
+		
 		player();
+		
+//		void 
 	protected:
 };
 

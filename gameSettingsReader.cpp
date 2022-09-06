@@ -13,11 +13,14 @@ gameSettingsReader::gameSettingsReader(){
 	gameSettingsReaderF();
 }
 void gameSettingsReader::gameSettingsReaderF(){
-	int row = 2;
-	int col = 2;
+	int row = 10; // parameters
+	int col = 5; // modes
 	double myArray[row][col];
+	int difficulty = 1;
+//	if (difficulty == 1){
+	
     ifstream inputfile("erhun.txt");
-    
+//}
     if (!inputfile.is_open()){
 	
 	    // If you get the error below, there is a problem with file A
@@ -32,7 +35,7 @@ void gameSettingsReader::gameSettingsReaderF(){
         for (int c = 0; c < col; c++) 
         {
         	inputfile >> myArray[r][c];  
-        	cout << myArray[r][c] << "\t";
+        	cout << myArray[r][c] << endl;
         }
     }
 }

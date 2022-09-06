@@ -14,7 +14,7 @@ using namespace std;
 
 
 
-/* This is where all the input to the window goes to */
+///* This is where all the input to the window goes to */
 //LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) {
 //	switch(Message) {
 //		
@@ -93,8 +93,8 @@ using namespace std;
 //		return 0;
 //	}
 //
-////HBRUSH brush = CreateSolidBrush(RGB(0, 255, 255));
-////SetClassLongPtr(hwnd, GCLP_HBRBACKGROUND, (LONG_PTR)brush);
+//HBRUSH brush = CreateSolidBrush(RGB(0, 255, 255));
+//SetClassLongPtr(hwnd, GCLP_HBRBACKGROUND, (LONG_PTR)brush);
 //	/*
 //		This is the heart of our program where all input is processed and 
 //		sent to WndProc. Note that GetMessage blocks code flow until it receives something, so
@@ -104,14 +104,16 @@ using namespace std;
 //		TranslateMessage(&msg); /* Translate key codes to chars if present */
 //		DispatchMessage(&msg); /* Send it to WndProc */
 //	}
-	
+//	
 	
 	int main(int argc, char** argv){
 	
 	GameObject startGame;	
 	Region karadeniz;
+	Region akdeniz;
 //	gameSettingsReader settings;
-	electionMethod election(karadeniz);
+	electionMethod election_01(karadeniz);
+//	electionMethod election_02(akdeniz);
 //	election(karadeniz);
 //	electionMethod(karadeniz);
 	

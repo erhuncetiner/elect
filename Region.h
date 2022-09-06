@@ -40,6 +40,8 @@ class Region : public GameObject
 		Party party_08;
 		
 		Region();
+		
+		
 	protected:
 };
 
