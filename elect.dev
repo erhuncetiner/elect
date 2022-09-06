@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=40
+UnitCount=42
 
 [VersionInfo]
 Major=1
@@ -442,6 +442,26 @@ BuildCmd=
 
 [Unit40]
 FileName=electionMethod.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit41]
+FileName=map.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit42]
+FileName=map.cpp
 CompileCpp=1
 Folder=
 Compile=1
