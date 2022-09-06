@@ -1,5 +1,7 @@
 #include <SDL2/SDL.h>
 #include <iostream>
+//export CFLAGS='-gdwarf-2 -gstrict-dwarf'
+
 
 using namespace std;
 
