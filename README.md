@@ -1,2 +1,0 @@
-# elected
-Elected: The Game
