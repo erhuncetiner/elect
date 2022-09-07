@@ -28,9 +28,7 @@ class map : public GameObject
 		Region region_17;
 		Region region_18;
 		Region region_19;
-		Region region_20;
-
-		
+		Region region_20;		
 		
 		map();
 	protected:
