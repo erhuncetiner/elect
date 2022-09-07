@@ -31,6 +31,9 @@ class pops : public GameObject
 		
 		
 		pops();
+		
+		void delight();
+		void disgust();
 	protected:
 };
 

@@ -12,8 +12,6 @@
 
 using namespace std;
 
-
-
 ///* This is where all the input to the window goes to */
 //LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) {
 //	switch(Message) {

@@ -43,13 +43,13 @@ electionMethod::electionMethod(Region region_x)
 	region_x.party_01.currentTotalVote = 278894;
 	int p1 = region_x.party_01.currentTotalVote;
 	
-	region_x.party_02.currentTotalVote = 192006;						//30k
+	region_x.party_02.currentTotalVote = 192006;
 	int p2 = region_x.party_02.currentTotalVote;
 	
-	region_x.party_03.currentTotalVote = 112671; 		 //60k			//40k
+	region_x.party_03.currentTotalVote = 112671;
 	int p3 = region_x.party_03.currentTotalVote;
 
-	region_x.party_04.currentTotalVote = 63098; // 120k 	  //40k	
+	region_x.party_04.currentTotalVote = 63098;
 	int p4 = region_x.party_04.currentTotalVote;
 
 
@@ -63,6 +63,38 @@ electionMethod::electionMethod(Region region_x)
 	Party firstPlace;
 	xMax = max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote)));
 	firstPlace.currentTotalVote = xMax;
+	
+	bool electoralCollege = true;
+	
+	if (electoralCollege = true){ //// ELECTORAL COLLEGE MODE
+		if (xMax == region_x.party_04.currentTotalVote){
+			firstPlace = region_x.party_04;
+			region_x.party_04.currentDep =+ region_x.totalDep;
+		}
+		else if (xMax == region_x.party_03.currentTotalVote){
+			firstPlace = region_x.party_03;
+			region_x.party_03.currentDep =+ region_x.totalDep;
+		}
+		else if (xMax == region_x.party_02.currentTotalVote){
+			firstPlace = region_x.party_02;
+			region_x.party_02.currentDep =+ region_x.totalDep;
+		}
+		else if (xMax == region_x.party_01.currentTotalVote){
+			firstPlace = region_x.party_01;
+			region_x.party_01.currentDep =+ region_x.totalDep;
+		}
+
+	}	
+	
+	
+	
+	
+	else { //// D'HONDT METHOD
+	
+	
+	
+	
+	
 	while ((round <= region_x.totalDep)){ /// þimdilik sayý var normalde en çok olarak deðiþecek.
 		xMax = max(firstPlace.currentTotalVote, max(region_x.party_01.currentTotalVote, max(region_x.party_02.currentTotalVote, max(region_x.party_03.currentTotalVote, region_x.party_04.currentTotalVote))));
 		firstPlace.currentTotalVote = xMax;
@@ -144,6 +176,7 @@ electionMethod::electionMethod(Region region_x)
 
 //		region_x.party_01.currentTotalVote = region_x.party_01.currentTotalVote / round;	
 	}
+}
 	cout << region_x.party_01.currentDep << " deputies were won by Party 1 at the end of " << round - 1 << " rounds." << endl;
 	cout << region_x.party_02.currentDep << " deputies were won by Party 2 at the end of " << round - 1 << " rounds." << endl;
 	cout << region_x.party_03.currentDep << " deputies were won by Party 3 at the end of " << round - 1 << " rounds." << endl;

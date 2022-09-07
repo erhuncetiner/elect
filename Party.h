@@ -19,9 +19,7 @@ class Party : public GameObject
 		int social;
 		int economic;
 		bool irrational;
-		
-		
-						
+							
 		Party();
 	protected:
 };
